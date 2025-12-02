@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Chambre Rose Flamboyant – Féminité & Protocole BDSM</title>
+  <title>La Chambre Rose – Féminité & Protocole BDSM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -12,6 +12,7 @@
       --rose: #f4a6c8;
       --rose-deep: #b34b79;
       --gold: #f4cf7a;
+      --gold-soft: rgba(244, 207, 122, 0.45);
       --text: #fef5fb;
       --text-soft: #e1c5d8;
       --section-bg: #1b0a16;
@@ -36,7 +37,7 @@
       top: 0;
       z-index: 50;
       background: linear-gradient(to right, #240918, #2e1226);
-      border-bottom: 1px solid rgba(244, 207, 122, .35);
+      border-bottom: 1px solid var(--gold-soft);
     }
 
     .nav-inner {
@@ -46,7 +47,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
     }
 
     .logo {
@@ -61,8 +61,6 @@
       display: flex;
       gap: 12px;
       list-style: none;
-      flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
     nav a {
@@ -71,32 +69,43 @@
       letter-spacing: .14em;
       padding: 4px 8px;
       border-radius: 999px;
-      border: 1px solid transparent;
       color: var(--text-soft);
+      border: 1px solid transparent;
     }
 
     nav a:hover {
-      border-color: rgba(244, 207, 122, .6);
+      border-color: var(--gold);
       color: var(--gold);
-      background: rgba(12, 3, 6, .7);
+      background: rgba(0,0,0,0.3);
     }
 
-    /* STRUCTURE GÉNÉRALE */
+    /* BANNIÈRE ROSÉ-GOLD */
 
-    main {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 32px 16px 40px;
+    .banner {
+      background: linear-gradient(90deg, #f4cf7a, #f4a6c8, #fdd6ea);
+      color: #3b2431;
+      text-align: center;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
     }
+
+    .banner span { padding: 0 4px; }
+
+    /* SECTION AVEC BORDURES ROSE-GOLD */
 
     section {
       margin-bottom: 40px;
-      padding: 24px 20px;
+      padding: 28px 22px;
       background: var(--section-bg);
       border-radius: 18px;
-      border: 1px solid rgba(244, 207, 122, .28);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, .55);
+      border: 2px solid var(--gold-soft);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .50);
     }
+
+    /* HERO */
 
     section.hero {
       text-align: center;
@@ -107,7 +116,7 @@
       font-size: .78rem;
       letter-spacing: .16em;
       text-transform: uppercase;
-      color: var(--rose-soft);
+      color: var(--rosa-soft);
     }
 
     .hero-title {
@@ -120,27 +129,43 @@
       color: transparent;
     }
 
-    .hero-sub {
-      margin-top: 12px;
-      color: var(--text-soft);
-      max-width: 640px;
+    .hero-quote {
+      margin-top: 16px;
+      font-style: italic;
+      color: var(--rose-soft);
+      max-width: 560px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .hero-quote span {
+      display: block;
+      margin-top: 6px;
+      font-style: normal;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .hero-sub {
+      margin-top: 14px;
+      color: var(--text-soft);
+      max-width: 640px;
+      margin: auto;
     }
 
     .hero-tags {
       margin-top: 16px;
       display: flex;
+      gap: 8px;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 8px;
     }
 
     .tag {
       font-size: .78rem;
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(244, 207, 122, .38);
+      border: 1px solid var(--gold-soft);
       background: rgba(10, 2, 8, .9);
       color: var(--rose-soft);
     }
@@ -148,37 +173,31 @@
     .hero-actions {
       margin-top: 18px;
       display: flex;
-      justify-content: center;
       gap: 10px;
+      justify-content: center;
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
-      align-items: center;
-      justify-content: center;
       padding: 9px 18px;
       border-radius: 999px;
-      border: 1px solid transparent;
       font-size: .9rem;
+      border: 1px solid transparent;
       cursor: pointer;
-      white-space: nowrap;
     }
 
     .btn-primary {
       background: linear-gradient(135deg, #f4a6c8, #fbd3e4, #f4cf7a);
       color: #3b2431;
       font-weight: 600;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, .7);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
     }
 
     .btn-outline {
-      border-color: rgba(244, 207, 122, .7);
+      border-color: var(--gold);
       color: var(--gold);
-      background: transparent;
     }
-
-    /* TITRES SECTIONS */
 
     h2 {
       font-family: "Georgia", "Times New Roman", serif;
@@ -187,75 +206,24 @@
       color: var(--rose-soft);
     }
 
-    .section-intro {
-      color: var(--text-soft);
-      margin-bottom: 10px;
-    }
+    .section-intro { color: var(--text-soft); margin-bottom: 10px; }
 
-    /* LISTES & BLOCS */
+    ul { margin: 6px 0 8px 18px; color: var(--text-soft); }
 
-    p {
-      margin-bottom: 10px;
-      color: var(--text-soft);
-    }
+    .links-list { list-style: none; padding: 0; }
 
-    ul {
-      margin: 6px 0 8px 18px;
-      color: var(--text-soft);
-    }
-
-    li { margin-bottom: 4px; }
-
-    .subheading {
-      margin-top: 10px;
-      font-weight: 600;
-      color: var(--rose);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .pill {
-      font-size: .8rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(31, 9, 22, .9);
-      border: 1px solid rgba(244, 207, 122, .25);
-      color: var(--rose-soft);
-    }
-
-    /* LIENS */
-
-    .links-list {
-      list-style: none;
-      margin: 10px 0 0;
-      padding: 0;
-    }
-
-    .links-list li {
-      margin-bottom: 6px;
-    }
+    .links-list li { margin-bottom: 8px; }
 
     .links-list a {
       color: var(--rose-soft);
       text-decoration: underline;
-      text-decoration-color: rgba(244,207,122,.6);
     }
 
-    .links-list a:hover {
-      color: var(--gold);
-    }
+    .links-list a:hover { color: var(--gold); }
 
     /* CONTACT */
 
-    .contact-grid {
-      display: grid;
-      gap: 18px;
-    }
+    .contact-grid { display: grid; gap: 18px; }
 
     @media (min-width: 720px) {
       .contact-grid {
@@ -266,37 +234,19 @@
     .contact-box {
       background: #120611;
       border-radius: 14px;
-      padding: 14px;
-      border: 1px solid rgba(244, 207, 122, .3);
-    }
-
-    label {
-      display: block;
-      font-size: .85rem;
-      margin-bottom: 4px;
-      color: var(--rose-soft);
+      padding: 18px;
+      border: 2px solid var(--gold-soft);
     }
 
     input, textarea {
       width: 100%;
       padding: 7px 9px;
-      border-radius: 8px;
-      border: 1px solid #3b1a2b;
       background: #1b0a16;
+      border: 1px solid #3b1a2b;
       color: var(--text);
-      font-size: .9rem;
+      border-radius: 8px;
       margin-bottom: 10px;
     }
-
-    input:focus, textarea:focus {
-      outline: 1px solid var(--rose);
-      border-color: var(--rose);
-    }
-
-    textarea { min-height: 120px; resize: vertical; }
-
-
-    /* FOOTER */
 
     footer {
       text-align: center;
@@ -311,7 +261,7 @@
 
 <header>
   <div class="nav-inner">
-    <div class="logo">Chambre Rose Flamboyant</div>
+    <div class="logo">La Chambre Rose</div>
     <nav>
       <ul>
         <li><a href="#accueil">Accueil</a></li>
@@ -324,51 +274,58 @@
       </ul>
     </nav>
   </div>
+
+  <div class="banner">
+    <span>Sous la direction de Dame Émanuelle</span> ·
+    <span>Boudoir privé – Rive-Nord / Laurentides</span>
+  </div>
 </header>
 
 <main>
 
 <!-- ACCUEIL -->
 <section id="accueil" class="hero">
-  <div class="hero-kicker">Féminité évolutive & protocole BDSM</div>
-  <h1 class="hero-title">Un cadre féminin, hiérarchisé<br>et assumé sur la Rive-Nord / Laurentides.</h1>
+  <div class="hero-kicker">Féminité évolutive & Protocole</div>
+
+  <h1 class="hero-title">La Chambre Rose</h1>
+
+  <p class="hero-quote">
+    « Je ne vous promets pas le confort ; je vous offre un cadre.
+    À vous de décider si vous êtes prêt(e) à y prendre place. »
+    <span>– Dame Émanuelle</span>
+  </p>
+
   <p class="hero-sub">
-    Chambre Rose Flamboyant est un espace privé où l’on se place sous la direction de Dame.
-    Le cadre est pastel, rosé-gold, raffiné, mais clairement structuré. Chaque geste,
-    chaque intention et chaque parole s’inscrivent dans un protocole consensuel.
+    Un espace privé dédié à la féminisation dirigée, au protocole formel et à une
+    esthétique rosée et dorée.  
+    Ici, la douceur visuelle rencontre l’autorité hiérarchique.
   </p>
 
   <div class="hero-tags">
+    <span class="tag">Protocole</span>
     <span class="tag">Féminisation dirigée</span>
-    <span class="tag">Protocole & rituels</span>
-    <span class="tag">BDSM consensuel</span>
+    <span class="tag">Cadre hiérarchique</span>
   </div>
 
   <div class="hero-actions">
     <a href="#contact" class="btn btn-primary">Soumettre une demande</a>
-    <a href="#apropos" class="btn btn-outline">Prendre connaissance du cadre</a>
+    <a href="#apropos" class="btn btn-outline">Découvrir le cadre</a>
   </div>
 </section>
 
 <!-- À PROPOS -->
 <section id="apropos">
   <h2>À propos</h2>
+
   <p class="section-intro">
-    Chambre Rose Flamboyant s’adresse aux personnes qui souhaitent se placer sous
-    un cadre de féminisation et de domination structuré, où la hiérarchie des rôles,
-    la discipline et le protocole sont assumés.
+    La Chambre Rose accueille celles et ceux qui souhaitent se placer sous la direction
+    formelle de Dame, dans un cadre intime, structuré et hiérarchisé.
   </p>
 
   <p>
-    Dame attend de Vous un ton respectueux, une présentation claire, et un engagement
-    réel dans le rôle pour lequel Vous postulez. La féminisation ici touche à la
-    posture, à la tenue, au maintien, à la façon de répondre et de se présenter.
-  </p>
-
-  <p>
-    Les rencontres se déroulent sur la Rive-Nord de Montréal, avec une possibilité
-    d’organisation pour les Laurentides. Aucun détail sensible n’est communiqué
-    publiquement&nbsp;; tout est traité en privé après acceptation de Votre demande.
+    La féminisation y est raffinée : posture, maintien, façon de parler, présentation,
+    tenue et attitude.  
+    L'ensemble demeure discret, respectueux et entièrement consensuel.
   </p>
 </section>
 
@@ -377,172 +334,104 @@
   <h2>Protocole & expériences</h2>
 
   <p class="section-intro">
-    La Chambre Rose n’est pas un lieu d’improvisation. Vous entrez dans un cadre
-    avec des règles, des attentes et un protocole. Chaque demande est étudiée
-    à l’écrit avant d’être acceptée ou refusée par Dame.
+    La Chambre Rose fonctionne selon un protocole strict. Chaque demande est évaluée
+    à l’écrit avant toute acceptation.
   </p>
 
-  <p class="subheading">Féminisation sous autorité</p>
-  <p>
-    Séances centrées sur la féminisation dirigée&nbsp;: posture, maintien,
-    langage, façon de se tenir, de répondre et d’obéir. La dimension BDSM
-    se manifeste dans les codes, l’attitude et la hiérarchie.
-  </p>
+  <p class="subheading">Féminisation dirigée</p>
+  <p>Posture, maintien, langage, manière de se présenter.</p>
 
-  <p class="subheading">Protocole & rituels</p>
-  <p>
-    Rituels de présentation, formules de salutation, postures imposées,
-    règles de conduite. Une fois accepté(e), Vous êtes tenu(e) de Vous conformer
-    au protocole en vigueur dans la Chambre.
-  </p>
+  <p class="subheading">Rituels & codes</p>
+  <p>Formules, positions, règles, engagements.</p>
 
   <p class="subheading">Parcours évolutif</p>
-  <p>
-    Pour celles et ceux qui souhaitent approfondir : progression de la féminisation,
-    durcissement progressif du protocole, raffinement de Votre rôle. Le rythme
-    est établi par Dame selon Votre niveau.
-  </p>
+  <p>Progression graduelle selon Votre niveau et Votre constance.</p>
 </section>
 
 <!-- UNIVERS -->
 <section id="univers">
   <h2>Univers & atmosphère</h2>
-  <p class="section-intro">
-    Boudoir pastel et rosé-gold, douceur disciplinée, esthétique maîtrisée.
-  </p>
+
+  <p class="section-intro">Boudoir rosé-gold, discipline douce, cadre enveloppant.</p>
 
   <p>
-    L’ambiance évoque une chambre d’application de règles féminines&nbsp;: lumières
-    contrôlées, détails raffinés, présence hiérarchique douce mais ferme.
+    La Chambre Rose est un espace pastel, orné, silencieux, propice au respect
+    et à l’ordonnancement.
   </p>
-
-  <div class="pill-row">
-    <span class="pill">Boudoir pastel & rosé-gold</span>
-    <span class="pill">Hiérarchie formelle</span>
-    <span class="pill">Féminité sous protocole</span>
-    <span class="pill">Cadre intime & structuré</span>
-  </div>
 </section>
 
 <!-- CADRE -->
 <section id="valeurs">
   <h2>Cadre, valeurs & limites</h2>
-  <p class="section-intro">
-    La domination et la féminisation prennent leur sens dans un cadre rigoureux,
-    consenti et clairement établi.
-  </p>
 
   <ul>
-    <li><strong>Consentement explicite</strong> – rien n’est imposé sans accord clair.</li>
-    <li><strong>Communication préalable</strong> – Votre demande est analysée avant toute suite.</li>
-    <li><strong>Respect des limites</strong> – Vos limites fermes sont respectées.</li>
-    <li><strong>Confidentialité totale</strong> – tout demeure strictement privé.</li>
-    <li><strong>Ancrage régional</strong> – Rive-Nord / Laurentides.</li>
+    <li><strong>Consentement clair</strong></li>
+    <li><strong>Communication préalable</strong></li>
+    <li><strong>Respect des limites</strong></li>
+    <li><strong>Confidentialité</strong></li>
+    <li><strong>Rive-Nord / Laurentides</strong></li>
   </ul>
 </section>
 
 <!-- LIENS -->
 <section id="liens">
-  <h2>Liens & présences en ligne</h2>
-  <p class="section-intro">
-    Les plateformes suivantes permettent de suivre l’univers de Dame Émanuelle
-    sous différents angles.
-  </p>
+  <h2>Liens officiels</h2>
+
+  <p class="section-intro">Dame centralise désormais Ses plateformes ici :</p>
 
   <ul class="links-list">
-
-    <li><strong>Jalf :</strong>
-      <a href="https://jalf.com/ct/memberProfile/4736514/" target="_blank">
-        Profil Jalf
-      </a>
-    </li>
-
-    <li><strong>FetLife :</strong>
-      <a href="https://fetlife.com/Dame_Emanuelle7" target="_blank">
-        fetlife.com/Dame_Emanuelle7
-      </a>
-    </li>
-
-    <li><strong>Bluesky :</strong>
-      <a href="https://bsky.app/profile/dameemanuelle.bsky.social" target="_blank">
-        dameemanuelle.bsky.social
-      </a>
-    </li>
-
-    <li><strong>Lien principal (Linktree) :</strong>
+    <li>
+      <strong>Lien principal :</strong>
       <a href="https://linktr.ee/Dame_emanuelle" target="_blank">
         linktr.ee/Dame_emanuelle
       </a>
     </li>
-
   </ul>
 </section>
 
 <!-- PARTENAIRES -->
 <section id="partenaires">
-  <h2>Partenaires & maisons affiliées</h2>
-  <p class="section-intro">
-    Certaines Maisons collaborent avec la Chambre Rose Flamboyant dans un esprit
-    commun de rigueur, d’esthétique et de discipline.
-  </p>
+  <h2>Maisons affiliées</h2>
 
   <ul class="links-list">
     <li><strong>Maison Domsteel13 :</strong>
-      <a href="https://domsteel13.github.io/cuiretfantaisie/" target="_blank">
-        Cuir & Fantaisie – Expériences dirigées
-      </a>
+      <a href="https://domsteel13.github.io/cuiretfantaisie/" target="_blank">Cuir & Fantaisie</a>
     </li>
 
     <li><strong>Maison Lady Zaphir :</strong>
-      <a href="https://ladyzaphir-dev.github.io/Site-turquoise/" target="_blank">
-        Site Turquoise – Discipline féminine turquoise
-      </a>
+      <a href="https://ladyzaphir-dev.github.io/Site-turquoise/" target="_blank">Site Turquoise</a>
     </li>
   </ul>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Rive-Nord / Laurentides – Soumettre une demande</h2>
-  <p class="section-intro">
-    Toute démarche commence par une présentation écrite. Votre ton, votre courtoisie
-    et votre clarté sont pris en considération avant toute réponse de Dame.
-  </p>
+  <h2>Rive-Nord / Laurentides – Contact</h2>
 
   <div class="contact-grid">
     <div class="contact-box">
       <form>
-        <label for="nom">Nom / Pseudonyme</label>
-        <input id="nom" type="text" placeholder="Votre nom ou alias">
+        <label>Nom / Pseudonyme</label>
+        <input type="text">
 
-        <label for="region">Région</label>
-        <input id="region" type="text" placeholder="Rive-Nord, Laurentides…">
+        <label>Région</label>
+        <input type="text">
 
-        <label for="objet">Objet de la demande</label>
-        <input id="objet" type="text" placeholder="Féminisation, protocole, parcours…">
+        <label>Objet de la demande</label>
+        <input type="text">
 
-        <label for="message">Présentation & attentes</label>
-        <textarea id="message" placeholder="Votre niveau, expérience, limites & attentes."></textarea>
+        <label>Présentation & attentes</label>
+        <textarea></textarea>
 
-        <button type="submit" class="btn btn-primary" style="margin-top:4px;">(Formulaire symbolique)</button>
+        <button type="submit" class="btn btn-primary">(Formulaire symbolique)</button>
       </form>
     </div>
 
     <div class="contact-box">
-      <p>
-        Pour communiquer avec Dame de manière officielle :
-      </p>
-
+      <p><strong>Contact officiel :</strong></p>
       <ul>
         <li><strong>Téléphone :</strong> (450) 300-8418</li>
-        <li><strong>Courriel :</strong> à définir selon vos préférences</li>
-        <li><strong>Messagerie privée :</strong> selon plateforme</li>
       </ul>
-
-      <p style="margin-top:10px;">
-        Mentionnez dès le premier message si Vous êtes situé(e) sur la Rive-Nord
-        ou dans les Laurentides afin de faciliter l’organisation.
-      </p>
     </div>
   </div>
 </section>
@@ -550,7 +439,7 @@
 </main>
 
 <footer>
-  © <span id="year"></span> Chambre Rose Flamboyant — Sous la direction de Dame.
+  © <span id="year"></span> La Chambre Rose — Sous la direction de Dame.
 </footer>
 
 <script>
