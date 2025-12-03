@@ -5,256 +5,8 @@
   <title>La Chambre Rose – Féminité & Protocole BDSM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    :root {
-      --fond: #120611;
-      --rose-soft: #fdd6ea;
-      --rose: #f4a6c8;
-      --rose-deep: #b34b79;
-      --gold: #f4cf7a;
-      --gold-soft: rgba(244, 207, 122, 0.45);
-      --text: #fef5fb;
-      --text-soft: #e1c5d8;
-      --section-bg: #1b0a16;
-      --max: 960px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: radial-gradient(circle at top, #2e1226, var(--fond) 55%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    /* NAVIGATION */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: linear-gradient(to right, #240918, #2e1226);
-      border-bottom: 1px solid var(--gold-soft);
-    }
-
-    .nav-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-family: "Georgia", "Times New Roman", serif;
-      font-size: 1.1rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--rose-soft);
-    }
-
-    nav ul {
-      display: flex;
-      gap: 12px;
-      list-style: none;
-    }
-
-    nav a {
-      font-size: .85rem;
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      padding: 4px 8px;
-      border-radius: 999px;
-      color: var(--text-soft);
-      border: 1px solid transparent;
-    }
-
-    nav a:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-      background: rgba(0,0,0,0.3);
-    }
-
-    /* BANNIÈRE ROSÉ-GOLD */
-
-    .banner {
-      background: linear-gradient(90deg, #f4cf7a, #f4a6c8, #fdd6ea);
-      color: #3b2431;
-      text-align: center;
-      padding: 6px 10px;
-      font-size: 0.8rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .banner span { padding: 0 4px; }
-
-    /* SECTION AVEC BORDURES ROSE-GOLD */
-
-    section {
-      margin-bottom: 40px;
-      padding: 28px 22px;
-      background: var(--section-bg);
-      border-radius: 18px;
-      border: 2px solid var(--gold-soft);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, .50);
-    }
-
-    /* HERO */
-
-    section.hero {
-      text-align: center;
-      background: radial-gradient(circle at top, #fdd6ea22, #1b0a16);
-    }
-
-    .hero-kicker {
-      font-size: .78rem;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--rosa-soft);
-    }
-
-    .hero-title {
-      margin-top: 10px;
-      font-size: 2.2rem;
-      line-height: 1.25;
-      font-family: "Georgia", "Times New Roman", serif;
-      background: linear-gradient(120deg, #fdd6ea, #f4a6c8, #f4cf7a);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-quote {
-      margin-top: 16px;
-      font-style: italic;
-      color: var(--rose-soft);
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero-quote span {
-      display: block;
-      margin-top: 6px;
-      font-style: normal;
-      font-size: 0.9rem;
-      color: var(--text-soft);
-    }
-
-    .hero-sub {
-      margin-top: 14px;
-      color: var(--text-soft);
-      max-width: 640px;
-      margin: auto;
-    }
-
-    .hero-tags {
-      margin-top: 16px;
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      font-size: .78rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--gold-soft);
-      background: rgba(10, 2, 8, .9);
-      color: var(--rose-soft);
-    }
-
-    .hero-actions {
-      margin-top: 18px;
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      padding: 9px 18px;
-      border-radius: 999px;
-      font-size: .9rem;
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #f4a6c8, #fbd3e4, #f4cf7a);
-      color: #3b2431;
-      font-weight: 600;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
-    }
-
-    .btn-outline {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    h2 {
-      font-family: "Georgia", "Times New Roman", serif;
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-      color: var(--rose-soft);
-    }
-
-    .section-intro { color: var(--text-soft); margin-bottom: 10px; }
-
-    ul { margin: 6px 0 8px 18px; color: var(--text-soft); }
-
-    .links-list { list-style: none; padding: 0; }
-
-    .links-list li { margin-bottom: 8px; }
-
-    .links-list a {
-      color: var(--rose-soft);
-      text-decoration: underline;
-    }
-
-    .links-list a:hover { color: var(--gold); }
-
-    /* CONTACT */
-
-    .contact-grid { display: grid; gap: 18px; }
-
-    @media (min-width: 720px) {
-      .contact-grid {
-        grid-template-columns: 1.2fr 1fr;
-      }
-    }
-
-    .contact-box {
-      background: #120611;
-      border-radius: 14px;
-      padding: 18px;
-      border: 2px solid var(--gold-soft);
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 7px 9px;
-      background: #1b0a16;
-      border: 1px solid #3b1a2b;
-      color: var(--text);
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 24px 16px 30px;
-      font-size: .8rem;
-      color: var(--text-soft);
-    }
-  </style>
+  <!-- Feuille de style externe -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -267,10 +19,8 @@
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#experiences">Protocole</a></li>
-        <li><a href="#univers">Univers</a></li>
-        <li><a href="#valeurs">Cadre</a></li>
-        <li><a href="#liens">Liens</a></li>
-        <li><a href="#contact">Rive-Nord / Laurentides</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -283,168 +33,227 @@
 
 <main>
 
-<!-- ACCUEIL -->
-<section id="accueil" class="hero">
-  <div class="hero-kicker">Féminité évolutive & Protocole</div>
+  <!-- ACCUEIL -->
+  <section id="accueil" class="hero">
+    <div class="hero-kicker">Féminité évolutive & Protocole</div>
 
-  <h1 class="hero-title">La Chambre Rose</h1>
+    <h1 class="hero-title">La Chambre Rose</h1>
 
-  <p class="hero-quote">
-    « Je ne vous promets pas le confort ; je vous offre un cadre.
-    À vous de décider si vous êtes prêt(e) à y prendre place. »
-    <span>– Dame Émanuelle</span>
-  </p>
+    <p class="hero-quote">
+      « La vraie élégance ne cherche pas à plaire à tout le monde ;  
+      elle attire seulement ceux qui sont prêts à s’y soumettre. »
+      <span>– Dame Émanuelle</span>
+    </p>
 
-  <p class="hero-sub">
-    Un espace privé dédié à la féminisation dirigée, au protocole formel et à une
-    esthétique rosée et dorée.  
-    Ici, la douceur visuelle rencontre l’autorité hiérarchique.
-  </p>
+    <p class="hero-sub">
+      Un espace privé dédié à la féminisation dirigée, au protocole formel et à une
+      esthétique rosée et dorée. Ici, la douceur visuelle rencontre une autorité
+      parfaitement assumée.
+    </p>
 
-  <div class="hero-tags">
-    <span class="tag">Protocole</span>
-    <span class="tag">Féminisation dirigée</span>
-    <span class="tag">Cadre hiérarchique</span>
-  </div>
+    <div class="hero-tags">
+      <span class="tag">Protocole</span>
+      <span class="tag">Féminisation dirigée</span>
+      <span class="tag">Cadre hiérarchique</span>
+    </div>
 
-  <div class="hero-actions">
-    <a href="#contact" class="btn btn-primary">Soumettre une demande</a>
-    <a href="#apropos" class="btn btn-outline">Découvrir le cadre</a>
-  </div>
-</section>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Soumettre une demande</a>
+      <a href="#apropos" class="btn btn-outline">Découvrir le cadre</a>
+    </div>
+  </section>
 
-<!-- À PROPOS -->
-<section id="apropos">
-  <h2>À propos</h2>
+  <!-- À PROPOS -->
+  <section id="apropos">
+    <h2>À propos</h2>
 
-  <p class="section-intro">
-    La Chambre Rose accueille celles et ceux qui souhaitent se placer sous la direction
-    formelle de Dame, dans un cadre intime, structuré et hiérarchisé.
-  </p>
+    <p class="section-intro">
+      La Chambre Rose accueille celles et ceux qui souhaitent se placer sous la direction
+      formelle de Dame, dans un cadre intime, structuré et hiérarchisé.
+    </p>
 
-  <p>
-    La féminisation y est raffinée : posture, maintien, façon de parler, présentation,
-    tenue et attitude.  
-    L'ensemble demeure discret, respectueux et entièrement consensuel.
-  </p>
-</section>
+    <p>
+      La féminisation y est raffinée : posture, maintien, façon de parler, présentation,
+      tenue et attitude. L’ensemble demeure discret, respectueux et entièrement consensuel.
+    </p>
+  </section>
 
-<!-- PROTOCOLE -->
-<section id="experiences">
-  <h2>Protocole & expériences</h2>
+  <!-- PROTOCOLE -->
+  <section id="experiences">
+    <h2>Protocole & expériences</h2>
 
-  <p class="section-intro">
-    La Chambre Rose fonctionne selon un protocole strict. Chaque demande est évaluée
-    à l’écrit avant toute acceptation.
-  </p>
+    <p class="section-intro">
+      La Chambre Rose fonctionne selon un protocole strict. Chaque demande est évaluée
+      à l’écrit avant toute acceptation.
+    </p>
 
-  <p class="subheading">Féminisation dirigée</p>
-  <p>Posture, maintien, langage, manière de se présenter.</p>
+    <p class="subheading">Féminisation dirigée</p>
+    <p>Posture, maintien, langage, manière de se présenter.</p>
 
-  <p class="subheading">Rituels & codes</p>
-  <p>Formules, positions, règles, engagements.</p>
+    <p class="subheading">Rituels & codes</p>
+    <p>Formules, positions, règles, engagements.</p>
 
-  <p class="subheading">Parcours évolutif</p>
-  <p>Progression graduelle selon Votre niveau et Votre constance.</p>
-</section>
+    <p class="subheading">Parcours évolutif</p>
+    <p>Progression graduelle selon Votre niveau et Votre constance.</p>
+  </section>
 
-<!-- UNIVERS -->
-<section id="univers">
-  <h2>Univers & atmosphère</h2>
+  <!-- UNIVERS -->
+  <section id="univers">
+    <h2>Univers & atmosphère</h2>
 
-  <p class="section-intro">Boudoir rosé-gold, discipline douce, cadre enveloppant.</p>
+    <p class="section-intro">Boudoir rosé-gold, discipline douce, cadre enveloppant.</p>
 
-  <p>
-    La Chambre Rose est un espace pastel, orné, silencieux, propice au respect
-    et à l’ordonnancement.
-  </p>
-</section>
+    <p>
+      La Chambre Rose est un espace pastel, orné, silencieux, propice au respect
+      et à l’ordonnancement.
+    </p>
+  </section>
 
-<!-- CADRE -->
-<section id="valeurs">
-  <h2>Cadre, valeurs & limites</h2>
+  <!-- CADRE -->
+  <section id="valeurs">
+    <h2>Cadre, valeurs & limites</h2>
 
-  <ul>
-    <li><strong>Consentement clair</strong></li>
-    <li><strong>Communication préalable</strong></li>
-    <li><strong>Respect des limites</strong></li>
-    <li><strong>Confidentialité</strong></li>
-    <li><strong>Rive-Nord / Laurentides</strong></li>
-  </ul>
-</section>
+    <ul>
+      <li><strong>Consentement clair</strong></li>
+      <li><strong>Communication préalable</strong></li>
+      <li><strong>Respect des limites</strong></li>
+      <li><strong>Confidentialité</strong></li>
+      <li><strong>Rive-Nord / Laurentides</strong></li>
+    </ul>
+  </section>
 
-<!-- LIENS -->
-<section id="liens">
-  <h2>Liens officiels</h2>
+  <!-- LIENS -->
+  <section id="liens">
+    <h2>Liens officiels</h2>
 
-  <p class="section-intro">Dame centralise désormais Ses plateformes ici :</p>
+    <p class="section-intro">Dame centralise désormais Ses plateformes ici :</p>
 
-  <ul class="links-list">
-    <li>
-      <strong>Lien principal :</strong>
-      <a href="https://linktr.ee/Dame_emanuelle" target="_blank">
-        linktr.ee/Dame_emanuelle
+    <ul class="links-list">
+      <li>
+        <strong>Lien principal :</strong>
+        <a href="https://linktr.ee/Dame_emanuelle" target="_blank">
+          linktr.ee/Dame_emanuelle
+        </a>
+      </li>
+    </ul>
+
+    <p class="section-intro" style="margin-top:14px;">
+      Pour prendre connaissance du cadre spécifique de Cuir &amp; Fantaisies :
+    </p>
+
+    <p class="protocole-link">
+      <a href="protocole-cuir-fantaisies.html" class="btn btn-outline protocole-btn">
+        Consulter le Protocole Cuir &amp; Fantaisies
       </a>
-    </li>
-  </ul>
-</section>
+    </p>
+  </section>
 
-<!-- PARTENAIRES -->
-<section id="partenaires">
-  <h2>Maisons affiliées</h2>
+  <!-- PARTENAIRES -->
+  <section id="partenaires">
+    <h2>Partenaires affiliés</h2>
 
-  <ul class="links-list">
-    <li><strong>Maison Domsteel13 :</strong>
-      <a href="https://domsteel13.github.io/cuiretfantaisie/" target="_blank">Cuir & Fantaisie</a>
-    </li>
+    <ul class="links-list">
+      <li><strong>Domsteel :</strong>
+        <a href="https://domsteel13.github.io/cuiretfantaisie/" target="_blank">
+          Cuir &amp; Fantaisies
+        </a>
+      </li>
 
-    <li><strong>Maison Lady Zaphir :</strong>
-      <a href="https://ladyzaphir-dev.github.io/Site-turquoise/" target="_blank">Site Turquoise</a>
-    </li>
-  </ul>
-</section>
+      <li><strong> Lady Zaphir :</strong>
+        <a href="https://ladyzaphir-dev.github.io/Site-turquoise/" target="_blank">
+          Site Turquoise
+        </a>
+      </li>
+    </ul>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Rive-Nord / Laurentides – Contact</h2>
+  <!-- TARIFS -->
+  <section id="tarifs">
+    <h2>Tarifs & modalités</h2>
 
-  <div class="contact-grid">
-    <div class="contact-box">
-      <form>
-        <label>Nom / Pseudonyme</label>
-        <input type="text">
+    <p class="section-intro">
+      La Chambre Rose fonctionne sur la base de contributions privées adaptées au type
+      de séance et à sa durée. Les montants précis ne sont jamais discutés publiquement ;
+      ils sont confirmés uniquement après acceptation de Votre demande.
+    </p>
 
-        <label>Région</label>
-        <input type="text">
+    <div class="tarifs-grid">
+      <div class="tarif-card">
+        <h3>Séance protocolaire</h3>
+        <p class="tarif-highlight">Féminisation & cadre de base</p>
+        <ul>
+          <li>Accueil, présentation et ajustement du rôle</li>
+          <li>Protocole simple, codes fondamentaux</li>
+          <li>Durée et contribution précisées en privé</li>
+        </ul>
+      </div>
 
-        <label>Objet de la demande</label>
-        <input type="text">
+      <div class="tarif-card">
+        <h3>Parcours évolutif</h3>
+        <p class="tarif-highlight">Suivi dans le temps</p>
+        <ul>
+          <li>Suivi régulier, progression de la féminisation</li>
+          <li>Affinement du protocole et des rituels</li>
+          <li>Modalités définies selon engagement et fréquence</li>
+        </ul>
+      </div>
 
-        <label>Présentation & attentes</label>
-        <textarea></textarea>
-
-        <button type="submit" class="btn btn-primary">(Formulaire symbolique)</button>
-      </form>
+      <div class="tarif-card">
+        <h3>Cadres partagés</h3>
+        <p class="tarif-highlight">Collaboration & partenaires</p>
+        <ul>
+          <li>Possibilité d’expériences coordonnées avec Cuir &amp; Fantaisies</li>
+          <li>Éventuelles collaborations avec Lady Zaphir</li>
+          <li>Organisation et contribution toujours fixées en privé</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="contact-box">
-      <p><strong>Contact officiel :</strong></p>
-      <ul>
-        <li><strong>Téléphone :</strong> (450) 300-8418</li>
-      </ul>
+    <p class="section-intro" style="margin-top:12px;">
+      Toute démarche financière est secondaire au cadre, au respect du protocole
+      et à la compatibilité réelle avec La Chambre Rose.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Rive-Nord / Laurentides – Contact</h2>
+
+    <div class="contact-grid">
+      <div class="contact-box">
+        <form>
+          <label>Nom / Pseudonyme</label>
+          <input type="text">
+
+          <label>Région</label>
+          <input type="text">
+
+          <label>Objet de la demande</label>
+          <input type="text">
+
+          <label>Présentation & attentes</label>
+          <textarea></textarea>
+
+          <button type="submit" class="btn btn-primary">(Formulaire symbolique)</button>
+        </form>
+      </div>
+
+      <div class="contact-box">
+        <p><strong>Contact officiel :</strong></p>
+        <ul>
+          <li><strong>Téléphone :</strong> (450) 300-8418</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
 <footer>
-  © <span id="year"></span> La Chambre Rose — Sous la direction de Dame.
+  © <span id="year"></span> La Chambre Rose — Sous la direction de Dame Émanuelle
 </footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+<!-- Script externe -->
+<script src="script.js"></script>
 </body>
 </html>
