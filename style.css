@@ -1,4 +1,24 @@
-/* Sections générales rose */
+/* Style global de la page rose */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #fbe8f3;
+  color: #4b3141;
+}
+
+main {
+  min-height: 100vh;
+}
+
+/* Sections générales */
 
 .section-rose {
   padding: 3rem 1.5rem;
@@ -24,17 +44,18 @@
   color: #b23b67;
 }
 
-/* Paragraphe et listes */
+/* Texte */
 
 .section-rose p {
   line-height: 1.7;
   margin-bottom: 1rem;
-  color: #4b3141;
 }
 
 .section-rose strong {
   color: #b23b67;
 }
+
+/* Listes */
 
 .section-rose ul.tarif-liste {
   margin: 0 0 1rem 1.2rem;
@@ -96,7 +117,6 @@
 
 .tarif-encadre-texte {
   margin-bottom: 0.6rem;
-  color: #4b3141;
 }
 
 /* Contact */
