@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Cuir & Fantaisies – Règles du protocole</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --fond: #050506;
+      --fond-deep: #020203;
+      --noir-cuir: #111113;
+      --noir-soft: #19191c;
+      --gold: #dcb86a;
+      --gold-soft: rgba(220, 184, 106, 0.55);
+      --text: #f5f3eb;
+      --text-soft: #c1beb4;
+      --accent: #853b28; /* brun rougi, rappel du cuir */
+      --max: 920px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, #2a1a12, var(--fond-deep) 52%),
+        linear-gradient(160deg, #000000, #151518);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+      border-bottom: 1px solid var(--gold-soft);
+      background: linear-gradient(to right, #050506, #151517);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .logo {
+      font-family: "Georgia", "Times New Roman", serif;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    .nav-right {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+      font-size: 0.8rem;
+    }
+
+    .nav-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--text-soft);
+    }
+
+    .nav-pill span {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.72rem;
+    }
+
+    .nav-pill--accent {
+      border-color: var(--gold-soft);
+      color: var(--gold);
+    }
+
+    /* BANNIÈRE */
+
+    .banner {
+      background: linear-gradient(90deg, #141315, #3c2a18, #141315);
+      border-top: 1px solid rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(0,0,0,0.8);
+      text-align: center;
+      padding: 7px 12px;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .banner span {
+      opacity: 0.9;
+      white-space: nowrap;
+    }
+
+    /* MAIN STRUCTURE */
+
+    main {
+      max-width: var(--max);
+      margin: 26px auto 40px;
+      padding: 0 16px;
+    }
+
+    section {
+      margin-bottom: 30px;
+      padding: 22px 18px;
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.03), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(0,0,0,0.85), #050506);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.9),
+        0 0 0 1px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      border: 1px solid rgba(255,255,255,0.03);
+      pointer-events: none;
+    }
+
+    /* HERO */
+
+    .hero {
+      text-align: left;
+      padding-top: 26px;
+      padding-bottom: 28px;
+      background:
+        radial-gradient(circle at top left, rgba(220,184,106,0.08), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(80,41,26,0.75), #050506);
+    }
+
+    .hero-kicker {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold-soft);
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 1.9rem;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      background: linear-gradient(120deg, #f5f0e5, #dcb86a, #a06832);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 0.92rem;
+      color: var(--text-soft);
+      max-width: 640px;
+      margin-bottom: 16px;
+    }
+
+    .hero-quote {
+      margin-top: 10px;
+      padding-left: 12px;
+      border-left: 2px solid var(--gold-soft);
+      font-style: italic;
+      color: #e3dfd4;
+      font-size: 0.9rem;
+    }
+
+    .hero-quote span {
+      display: block;
+      margin-top: 4px;
+      font-style: normal;
+      font-size: 0.85rem;
+      color: var(--gold);
+    }
+
+    .hero-tags {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(220,184,106,0.4);
+      background: radial-gradient(circle at top, rgba(220,184,106,0.14), #090909);
+      color: var(--text-soft);
+    }
+
+    /* TITRES & TEXTE */
+
+    h2 {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold-soft);
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 4px 0 8px;
+      padding-left: 0;
+    }
+
+    ul li {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      margin-bottom: 4px;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold-soft);
+      font-size: 0.8rem;
+    }
+
+    strong {
+      color: #f5f1e6;
+      font-weight: 600;
+    }
+
+    .section-intro {
+      font-size: 0.94rem;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    .section-number {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      margin-bottom: 3px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 10px 16px 24px;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="logo">Cuir & Fantaisies</div>
+    <div class="nav-right">
+      <div class="nav-pill"><span>Protocole officiel</span></div>
+      <div class="nav-pill nav-pill--accent"><span>Document de référence</span></div>
+    </div>
+  </div>
+  <div class="banner">
+    <span>Cadre – Discipline – Esthétique</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO / INTRO -->
+  <section class="hero">
+    <div class="hero-kicker">Document de protocole</div>
+    <h1 class="hero-title">Règles du protocole<br>Cuir &amp; Fantaisies</h1>
+
+    <p class="hero-sub">
+      Ce document définit le cadre dans lequel toute démarche, toute demande et
+      toute interaction avec <strong>Cuir &amp; Fantaisies</strong> est étudiée,
+      acceptée ou refusée. Rien n’y est laissé à l’improvisation&nbsp;: ni le ton,
+      ni la structure, ni l’attitude.
+    </p>
+
+    <p class="hero-quote">
+      « Le cuir n’est jamais un simple ornement.  
+      C’est un rappel visible que le cadre, lui, ne cède pas. »
+      <span>– Domsteel13</span>
+    </p>
+
+    <div class="hero-tags">
+      <span class="tag">Cadre strict</span>
+      <span class="tag">Consentement structuré</span>
+      <span class="tag">Esthétique & discipline</span>
+    </div>
+  </section>
+
+  <!-- 1. PREAMBULE -->
+  <section>
+    <div class="section-number">01</div>
+    <h2>Préambule</h2>
+    <p class="section-intro">
+      Le Protocole de <strong>Cuir &amp; Fantaisies</strong> existe pour garantir
+      un cadre clair, sécurisé et cohérent. Il repose sur quatre piliers&nbsp;:
+    </p>
+    <ul>
+      <li><strong>Respect formel</strong></li>
+      <li><strong>Clarté</strong> dans les demandes et les réponses</li>
+      <li><strong>Engagement réel</strong> dans le processus</li>
+      <li><strong>Constance</strong> de l’attitude et du comportement</li>
+    </ul>
+    <p>
+      Toute démarche qui ne s’inscrit pas dans ces principes est écartée, sans
+      nécessité de justification supplémentaire.
+    </p>
+  </section>
+
+  <!-- 2. PRÉSENTATION -->
+  <section>
+    <div class="section-number">02</div>
+    <h2>Présentation obligatoire</h2>
+    <p class="section-intro">
+      Avant toute chose, une présentation écrite structurée est exigée. Elle doit
+      impérativement comporter au minimum&nbsp;:
+    </p>
+    <ul>
+      <li><strong>Nom ou pseudonyme</strong></li>
+      <li><strong>Région</strong> (Rive-Nord, Laurentides ou autre)</li>
+      <li><strong>Niveau d’expérience</strong> pertinent</li>
+      <li><strong>Attentes générales</strong> (orientation de la démarche)</li>
+      <li><strong>Limites absolues</strong> clairement énoncées</li>
+    </ul>
+    <p>
+      Les messages confus, vides de contenu réel, trop familiers ou insistants
+      ne sont pas traités.
+    </p>
+  </section>
+
+  <!-- 3. TON & ATTITUDE -->
+  <section>
+    <div class="section-number">03</div>
+    <h2>Ton, attitude & conduite</h2>
+    <p class="section-intro">
+      En tout temps, le ton attendu est formel, mesuré et respectueux.
+    </p>
+    <h3>Exigences générales</h3>
+    <ul>
+      <li>Courtoisie stricte dans chaque message</li>
+      <li>Formulation réfléchie, phrases complètes</li>
+      <li>Absence de familiarité non sollicitée</li>
+      <li>Aucune demande intrusive, aucune exigence</li>
+      <li>Respect des délais de réponse, sans relances pressantes</li>
+      <li>Patience, calme et précision dans les échanges</li>
+    </ul>
+    <p>
+      Toute insistance, tentative de négociation permanente, agressivité ou
+      désorganisation manifeste met fin à la démarche.
+    </p>
+  </section>
+
+  <!-- 4. CADRE & SÉCURITÉ -->
+  <section>
+    <div class="section-number">04</div>
+    <h2>Cadre & sécurité</h2>
+    <p class="section-intro">
+      <strong>Cuir &amp; Fantaisies</strong> opère dans un cadre volontairement
+      structuré, sans improvisation.
+    </p>
+    <ul>
+      <li><strong>Consentement clair et écrit</strong> avant toute rencontre</li>
+      <li><strong>Respect intégral</strong> des limites affirmées</li>
+      <li><strong>Confidentialité</strong> sur l’identité et les échanges</li>
+      <li><strong>Évaluation préalable</strong> avant toute proposition concrète</li>
+      <li>Aucune dérive en dehors du cadre convenu</li>
+    </ul>
+    <p>
+      Le cadre s’ajuste au niveau réel de la personne, jamais l’inverse.
+    </p>
+  </section>
+
+  <!-- 5. STRUCTURE DE LA SÉANCE -->
+  <section>
+    <div class="section-number">05</div>
+    <h2>Structure d’une séance</h2>
+    <p class="section-intro">
+      Une séance n’est envisageable que lorsque les conditions suivantes sont réunies :
+    </p>
+    <ul>
+      <li>Présentation écrite acceptée</li>
+      <li>Cadre et protocole confirmés</li>
+      <li>Attentes clarifiées et réalistes</li>
+      <li>Limites réaffirmées juste avant la rencontre</li>
+      <li>Conditions logistiques définies (lieu, durée, contribution, etc.)</li>
+    </ul>
+    <p>
+      Chaque élément – geste, posture, accessoire, silence – est choisi avec intention.
+      Le hasard n’a pas de place dans ce contexte.
+    </p>
+  </section>
+
+  <!-- 6. TENUE & POSTURE -->
+  <section>
+    <div class="section-number">06</div>
+    <h2>Tenue, attitude & posture</h2>
+    <p class="section-intro">
+      Selon le cadre défini (cuir, discipline, contrôle, rituel), il peut être exigé :
+    </p>
+    <ul>
+      <li>Une tenue validée à l’avance</li>
+      <li>Des instructions de posture à respecter</li>
+      <li>Le silence pendant certaines consignes</li>
+      <li>Une attitude concentrée, présente, non dispersée</li>
+    </ul>
+    <p>
+      L’objectif n’est pas l’humiliation gratuite, mais la structure, la présence
+      et l’esthétique globale de la scène partagée.
+    </p>
+  </section>
+
+  <!-- 7. ENGAGEMENT & CONSTANCE -->
+  <section>
+    <div class="section-number">07</div>
+    <h2>Engagement & constance</h2>
+    <p class="section-intro">
+      Entrer dans l’univers de <strong>Cuir &amp; Fantaisies</strong> implique
+      un engagement minimal, mais réel.
+    </p>
+    <ul>
+      <li>Accepter d’être observé(e) et évalué(e) dans la durée</li>
+      <li>Se conformer au protocole établi pour soi</li>
+      <li>Faire preuve de constance dans la façon de se présenter et d’écrire</li>
+      <li>Respecter scrupuleusement les instructions reçues</li>
+    </ul>
+    <p>
+      Le non-respect répété des règles entraîne la suspension, voire la fin
+      définitive de la démarche.
+    </p>
+  </section>
+
+  <!-- 8. COMMUNICATION -->
+  <section>
+    <div class="section-number">08</div>
+    <h2>Règles de communication</h2>
+    <p class="section-intro">
+      Toute communication avec <strong>Cuir &amp; Fantaisies</strong> est soumise
+      aux règles suivantes :
+    </p>
+    <ul>
+      <li>Pas de contenu explicite ou déplacé dans les messages</li>
+      <li>Pas de pièce jointe non sollicitée</li>
+      <li>Pas de ton autoritaire – vous n’êtes pas en position d’en adopter un</li>
+      <li>Politesse en début et fin de message</li>
+      <li>Clarté, concision et sobriété</li>
+    </ul>
+    <p>
+      Les messages qui enfreignent ces règles peuvent rester sans réponse.
+    </p>
+  </section>
+
+  <!-- 9. ANCRAGE GÉOGRAPHIQUE -->
+  <section>
+    <div class="section-number">09</div>
+    <h2>Ancrage géographique</h2>
+    <p class="section-intro">
+      <strong>Cuir &amp; Fantaisies</strong> reçoit principalement :
+    </p>
+    <ul>
+      <li>Sur la <strong>Rive-Nord de Montréal</strong></li>
+      <li>Dans la région des <strong>Laurentides</strong></li>
+    </ul>
+    <p>
+      Les informations logistiques précises sont communiquées uniquement après
+      acceptation de la demande et validation du protocole.
+    </p>
+  </section>
+
+  <!-- 10. CONCLUSION -->
+  <section>
+    <div class="section-number">10</div>
+    <h2>Conclusion</h2>
+    <p class="section-intro">
+      Le Protocole de <strong>Cuir &amp; Fantaisies</strong> n’est pas un simple
+      ensemble de contraintes&nbsp;: c’est une architecture.
+    </p>
+    <p>
+      Il permet la rigueur, l’élégance, la sécurité, la cohérence et une intensité
+      maîtrisée, dans un univers où le cuir, la structure et le contrôle ne sont
+      jamais un accident de décor, mais un choix assumé.
+    </p>
+    <p>
+      Celles et ceux qui s’y inscrivent avec respect, sérieux et constance y trouvent
+      un cadre rare, exigeant et pleinement dirigé.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Cuir &amp; Fantaisies – Protocole officiel.
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  });
+</script>
+
+</body>
+</html>
